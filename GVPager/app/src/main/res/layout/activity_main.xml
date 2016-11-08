@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/darker_gray">
+
+    <glh.gvpager.view.GVPager
+        android:id="@+id/gvp"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:padding="5dp"
+        app:columnMargin="10dp"
+        app:columnNumber="2"
+        app:rowMargin="10dp"
+        app:rowNumber="2" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/gvp"
+        android:layout_centerHorizontal="true"
+        android:orientation="horizontal">
+
+        <glh.gvpager.view.IndicatorView
+            android:id="@+id/indicator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+
+</RelativeLayout>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <declare-styleable name="GridViewPager">
+        <attr name="columnNumber" format="integer" />//列数
+        <attr name="rowNumber" format="integer" />//行数
+        <attr name="columnMargin" format="dimension" />//列间距
+        <attr name="rowMargin" format="dimension" />//行间距
+        <attr name="android:paddingLeft" />
+        <attr name="android:paddingRight" />
+        <attr name="android:padding" />
+    </declare-styleable>
+
+</resources>
