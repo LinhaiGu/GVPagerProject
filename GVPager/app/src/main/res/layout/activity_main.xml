@@ -13,7 +13,7 @@
         app:columnMargin="10dp"
         app:columnNumber="2"
         app:rowMargin="10dp"
-        app:rowNumber="2" />
+        app:rowNumber="1" />
 
     <LinearLayout
         android:layout_width="wrap_content"

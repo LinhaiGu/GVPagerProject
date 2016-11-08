@@ -186,7 +186,7 @@ public class GVPager extends ViewPager {
         int listSize = mHGridViewList.size() - 1;
         HGridView hGridView;
         GridAdapter gridAdapter;
-        for (int i = 0, page = (mAdapter.getCount() % pageSize == 0) ? pageCount-- : pageCount; i <= Math.max(listSize, page); i++) {
+        for (int i = 0, page = (mAdapter.getCount() % pageSize == 0) ? --pageCount : pageCount; i <= Math.max(listSize, page); i++) {
             if (i <= listSize && i <= page) {
                 // 更新
                 hGridView = mHGridViewList.get(i);
@@ -237,10 +237,12 @@ public class GVPager extends ViewPager {
             container.removeView((View) object);
         }
 
+
         @Override
         public Object instantiateItem(ViewGroup container, int position) {
             container.addView(mHGridViewList.get(position), new LinearLayout.LayoutParams(LayoutParams.MATCH_PARENT, LayoutParams.MATCH_PARENT));
             return mHGridViewList.get(position);
+
         }
     }
 
@@ -259,7 +261,7 @@ public class GVPager extends ViewPager {
         if ((pageIndex + 1) > (mHGridViewList.size() - 1)) {
             setCurrentItem(0, false);
         } else {
-            setCurrentItem(pageIndex + 1);
+            setCurrentItem(pageIndex + 1, true);
         }
     }
 
@@ -499,6 +501,7 @@ public class GVPager extends ViewPager {
 
     /**
      * 设置指示器
+     *
      * @param _indicator
      */
     public void setIndicator(IndicatorView _indicator) {

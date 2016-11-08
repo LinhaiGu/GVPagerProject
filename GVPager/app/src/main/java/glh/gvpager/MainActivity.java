@@ -18,13 +18,13 @@ public class MainActivity extends AppCompatActivity {
 
     private IndicatorView indicator;
     private GVPager mGVPager;
-    private int[] resourceId = {R.drawable.demo1, R.drawable.demo2, R.drawable.demo3, R.drawable.demo4};
+    private int[] resourceId = {R.drawable.demo1, R.drawable.demo2, R.drawable.demo3, R.drawable.demo1,R.drawable.demo2, R.drawable.demo3, R.drawable.demo1, R.drawable.demo2,R.drawable.demo3, R.drawable.demo1};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        GridPagerAdapter gridPagerAdapter = new GridPagerAdapter(34);
+        GridPagerAdapter gridPagerAdapter = new GridPagerAdapter(10);
         mGVPager = (GVPager) findViewById(R.id.gvp);
         indicator = (IndicatorView) findViewById(R.id.indicator);
         mGVPager.setIndicator(indicator);
@@ -75,7 +75,7 @@ public class MainActivity extends AppCompatActivity {
                 viewHolder = (ViewHolder) convertView.getTag();
             }
 
-            viewHolder.iv_demo.setImageResource(resourceId[position % 4]);
+            viewHolder.iv_demo.setImageResource(resourceId[position]);
 
             return convertView;
         }
