@@ -1,6 +1,12 @@
 # GVPagerProject
 Horizontal auto play GridView
 
+![image](https://github.com/LinhaiGu/GVPagerProject/blob/master/gvp1.gif ) 
+
+![image](https://github.com/LinhaiGu/GVPagerProject/blob/master/gvp2.gif ) 
+
+![image](https://github.com/LinhaiGu/GVPagerProject/blob/master/gvp3.gif ) 
+
 instructions:
 ----
 
